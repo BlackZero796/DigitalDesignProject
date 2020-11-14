@@ -1,0 +1,5 @@
+|buzzer_test
+input => buzz~reg0.CLK
+buzz << buzz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

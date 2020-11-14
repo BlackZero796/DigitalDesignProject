@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use work.TTU.all;
+
+entity BUZZER is port(
+	input : in std_logic
+	clock : in std_logic
+	buzz : out std_logic);
+	end BUZZER;
+	
+architecture RTL of BUZZER is begin
+	process(input, clock)
+		variable i : integer := 0;
+	begin
+		if (clock'event and clock = '1') then
+			if (i <= 500000) then
+				i := i + 1;
+				a <= '0';
+			else if (i > 500000 and i < 1000000) then
+				i := i + 1;
+				a <= '0';
+			else if (i = 1000000) then
+				i := '0';
+			end if;
+		end if;
+	end process;
+end RTL;
