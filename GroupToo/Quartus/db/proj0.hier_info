@@ -1,0 +1,51 @@
+|proj0
+D1 => d_ff:U1.D
+D2 => d_ff:U2.D
+clock => d_ff:U1.CLK
+clock => d_ff:U2.CLK
+clock => d_ff:U4.CLK
+reset => d_ff:U1.RESET
+reset => d_ff:U2.RESET
+reset => d_ff:U4.RESET
+output << d_ff:U4.Q
+
+
+|proj0|D_FF:U1
+D => Q~reg0.DATAIN
+D => Qnot~reg0.DATAIN
+CLK => Qnot~reg0.CLK
+CLK => Q~reg0.CLK
+RESET => Qnot~reg0.ACLR
+RESET => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proj0|D_FF:U2
+D => Q~reg0.DATAIN
+D => Qnot~reg0.DATAIN
+CLK => Qnot~reg0.CLK
+CLK => Q~reg0.CLK
+RESET => Qnot~reg0.ACLR
+RESET => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proj0|AND_2:U3
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proj0|D_FF:U4
+D => Q~reg0.DATAIN
+D => Qnot~reg0.DATAIN
+CLK => Qnot~reg0.CLK
+CLK => Q~reg0.CLK
+RESET => Qnot~reg0.ACLR
+RESET => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

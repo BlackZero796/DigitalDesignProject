@@ -1,0 +1,389 @@
+Analysis & Synthesis report for proj0
+Sat Nov 14 14:29:22 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "D_FF:U4"
+ 10. Port Connectivity Checks: "D_FF:U2"
+ 11. Port Connectivity Checks: "D_FF:U1"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 14 14:29:22 2020       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                      ; proj0                                       ;
+; Top-level Entity Name              ; proj0                                       ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 3                                           ;
+;     Total combinational functions  ; 1                                           ;
+;     Dedicated logic registers      ; 3                                           ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 5                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; proj0              ; proj0              ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; ../../Resources/ttu.vhdl         ; yes             ; User VHDL File  ; D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl         ;         ;
+; proj0.vhd                        ; yes             ; User VHDL File  ; D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 3           ;
+;                                             ;             ;
+; Total combinational functions               ; 1           ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 1           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 1           ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 3           ;
+;     -- Dedicated logic registers            ; 3           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 5           ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 3           ;
+; Total fan-out                               ; 17          ;
+; Average fan-out                             ; 1.21        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |proj0                     ; 1 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 5    ; 0            ; 0          ; |proj0              ; proj0       ; work         ;
+;    |AND_2:U3|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proj0|AND_2:U3     ; AND_2       ; work         ;
+;    |D_FF:U1|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proj0|D_FF:U1      ; D_FF        ; work         ;
+;    |D_FF:U2|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proj0|D_FF:U2      ; D_FF        ; work         ;
+;    |D_FF:U4|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |proj0|D_FF:U4      ; D_FF        ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "D_FF:U4"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "D_FF:U2"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "D_FF:U1"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 3                           ;
+;     CLR               ; 3                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         2 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.38                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sat Nov 14 14:29:12 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj0 -c proj0
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (12018): Entity "OR2" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 144
+Warning (12018): Entity "OR3" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 164
+Warning (12018): Entity "OR4" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 185
+Warning (12018): Entity "AND3" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 230
+Warning (12018): Entity "AND4" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 251
+Warning (12090): Entity "XOR3" obtained from "../../Resources/ttu.vhdl" instead of from Quartus Prime megafunction library File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 296
+Warning (12090): Entity "XOR4" obtained from "../../Resources/ttu.vhdl" instead of from Quartus Prime megafunction library File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 317
+Warning (12018): Entity "NOR2" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 342
+Warning (12018): Entity "NOR3" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 362
+Warning (12018): Entity "NOR4" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 383
+Warning (12018): Entity "NAND2" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 408
+Warning (12018): Entity "NAND3" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 428
+Warning (12018): Entity "NAND4" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 449
+Warning (12090): Entity "XNOR3" obtained from "../../Resources/ttu.vhdl" instead of from Quartus Prime megafunction library File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 494
+Warning (12090): Entity "XNOR4" obtained from "../../Resources/ttu.vhdl" instead of from Quartus Prime megafunction library File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 515
+Warning (12018): Entity "SRFF" will be ignored because it conflicts with Quartus Prime primitive name File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 636
+Info (12021): Found 54 design units, including 26 entities, in source file /alanh/documents/digitalsysyemdesign/digitaldesignproject/resources/ttu.vhdl
+    Info (12022): Found design unit 1: TTU File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 56
+    Info (12022): Found design unit 2: TTU-body File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 64
+    Info (12022): Found design unit 3: EX_PACKAGE-A1 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 110
+    Info (12022): Found design unit 4: INV-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 127
+    Info (12022): Found design unit 5: OR2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 151
+    Info (12022): Found design unit 6: or3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 172
+    Info (12022): Found design unit 7: OR4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 194
+    Info (12022): Found design unit 8: AND_2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 217
+    Info (12022): Found design unit 9: AND3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 238
+    Info (12022): Found design unit 10: AND4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 260
+    Info (12022): Found design unit 11: XOR2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 283
+    Info (12022): Found design unit 12: XOR3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 304
+    Info (12022): Found design unit 13: XOR4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 326
+    Info (12022): Found design unit 14: NOR2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 349
+    Info (12022): Found design unit 15: NOR3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 370
+    Info (12022): Found design unit 16: NOR4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 392
+    Info (12022): Found design unit 17: NAND2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 415
+    Info (12022): Found design unit 18: NAND3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 436
+    Info (12022): Found design unit 19: NAND4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 458
+    Info (12022): Found design unit 20: XNOR2-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 481
+    Info (12022): Found design unit 21: XNOR3-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 502
+    Info (12022): Found design unit 22: XNOR4-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 524
+    Info (12022): Found design unit 23: decoder_3to8-behavioral File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 545
+    Info (12022): Found design unit 24: mux_2to1-behavioral File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 570
+    Info (12022): Found design unit 25: mux_4to1-behavioral File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 594
+    Info (12022): Found design unit 26: SR_LATCH-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 625
+    Info (12022): Found design unit 27: SRFF-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 645
+    Info (12022): Found design unit 28: D_FF-RTL File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 677
+    Info (12023): Found entity 1: EX_PACKAGE File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 105
+    Info (12023): Found entity 2: INV File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 121
+    Info (12023): Found entity 3: AND_2 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 210
+    Info (12023): Found entity 4: XOR2 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 276
+    Info (12023): Found entity 5: XOR3 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 296
+    Info (12023): Found entity 6: XOR4 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 317
+    Info (12023): Found entity 7: XNOR2 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 474
+    Info (12023): Found entity 8: XNOR3 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 494
+    Info (12023): Found entity 9: XNOR4 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 515
+    Info (12023): Found entity 10: decoder_3to8 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 540
+    Info (12023): Found entity 11: mux_2to1 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 564
+    Info (12023): Found entity 12: mux_4to1 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 588
+    Info (12023): Found entity 13: SR_LATCH File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 618
+    Info (12023): Found entity 14: D_FF File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/Resources/ttu.vhdl Line: 669
+Info (12021): Found 2 design units, including 1 entities, in source file proj0.vhd
+    Info (12022): Found design unit 1: proj0-ST File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 17
+    Info (12023): Found entity 1: proj0 File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: testbench-BENCH File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/testbench.vhd Line: 10
+    Info (12023): Found entity 1: testbench File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/testbench.vhd Line: 7
+Info (12127): Elaborating entity "proj0" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at proj0.vhd(19): object "Q1b" assigned a value but never read File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at proj0.vhd(19): object "Q2b" assigned a value but never read File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at proj0.vhd(19): object "outputb" assigned a value but never read File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 19
+Info (12129): Elaborating entity "D_FF" using architecture "A:rtl" for hierarchy "D_FF:U1" File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 37
+Info (12129): Elaborating entity "AND_2" using architecture "A:rtl" for hierarchy "AND_2:U3" File: D:/alanh/Documents/DigitalSysyemDesign/DigitalDesignProject/GroupToo/Quartus/proj0.vhd Line: 43
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 3 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sat Nov 14 14:29:22 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
+
+
